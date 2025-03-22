@@ -5,300 +5,239 @@ define(['mozart'], function (mozart) {
 
 //////////// LEVEL 1 /////////////////////////////////////////////////////////
 `
-<h1>Level 1: Introduction</h1>
-Beep boop!
-JavaScript is a very popular web-based scripting language.
-Almost every website (and obviously this one!) uses JavaScript to display things dynamically in your browser.
-<br><br>
-<h2>The Console Tab</h2>
-Before we do any code we'll start with the basics: using the console. The console is a tool developers use to test that a program is working properly, it's used to log a program's output and allow you to interact with it.
-<br><br>
-In the <b>Console Tab</b>, type <code>5 + 8</code> into the text field, hit Enter and observe what happens.<br>
-			
-The first line ( <code>&rarr; 5 + 8</code> ) is your input,
-and the second line ( <code class="console-out">&larr; 13</code> ) is the output after JavaScript executes your input.
-<br><br>
-Now for something a bit more interesting. Run <code>robot.info().x</code> in the console, the output <code class="console-out">&larr; 80</code> is the robot's <b>x</b> position in the game.<br><br>
+<h1>Tase 1: Sissejuhatus</h1> Piip-piip! JavaScript on väga populaarne veebis kasutatav skriptimiskeel. Peaaegu iga veebileht (ja loomulikult ka see!) kasutab JavaScripti, et dünaamiliselt sisu kuvada sinu brauseris. <br><br> <h2>Konsooli vahekaart</h2> Enne kui hakkame koodi kirjutama, alustame põhitõdedest: konsooli kasutamisest. Konsool on tööriist, mida arendajad kasutavad, et testida, kas programm töötab õigesti. Seda kasutatakse programmi väljundi logimiseks ja sellega suhtlemiseks. <br><br>
+<b>Konsooli vahekaardil</b> kirjuta tekstiväljale <code>5 + 8</code>, vajuta Enter ja vaata, mis juhtub.<br>
 
-There are more properties for the robot, try out the following:<br>
+Esimene rida (<code>→ 5 + 8</code>) on sinu sisend,
+ja teine rida (<code class="console-out">← 13</code>) on väljund, mille JavaScript sinu sisendi põhjal arvutas.
+<br><br>
+
+Proovime midagi huvitavamat. Käivita konsoolis <code>robot.info().x</code>. Väljundiks peaks olema näiteks <code class="console-out">← 80</code>, mis näitab roboti <b>x</b>-asukohta mängus.
+<br><br>
+
+Robotil on veel omadusi, proovi ka neid:
 <code>robot.info().y</code> <code>robot.info().health</code> <code>robot.info().energy</code> <code>robot.info().width</code>
-
 <br><br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console" target="_blank" class="learn-more">Learn More About Console</a>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console" target="_blank" class="learn-more">Loe rohkem konsooli kohta</a>
 <br><br>
-<h2>The Script Tab</h2>
-Ok. Cool. So now we can talk to the console. Let's try and get the robot to talk to the console.<br>
-In the <b>Script Tab</b> you'll see the following code:
-<div class="code">function init(robot) {
-	// your code goes here
-}
 
+<h2>Skripti vahekaart</h2> Nüüd oskame suhelda konsooliga. Proovime panna roboti konsooliga rääkima. <br>
+<b>Skripti vahekaardil</b> näed järgmist koodi:
+
+<div class="code">function init(robot) { // siia kirjuta oma kood }
 function loop(robot) {
-	// your code goes here
+// siia kirjuta oma kood
 }</div>
 
-These are JavaScript functions, this is how we'll control the robot!<br>
-The lines beginning with two slashes <code>\/\/</code> are comments, they are for us (humans) to better understand the code we write. They are useless to the program so it ignores them.<br><br>
+Need on JavaScripti funktsioonid – just nendega hakkame robotit juhtima!<br>
+Kahte kaldkriipsu (<code>//</code>) sisaldavad read on kommentaarid – need on mõeldud inimestele, et koodi paremini mõista. Programm neid ei loe ega kasuta.
+<br><br>
 
-The <code>init(robot)</code> function is short for initialize, this function is run once at the start of the program.<br>
-The <code>loop(robot)</code> function runs continuously while the program is running.
+Funktsioon <code>init(robot)</code> tähendab "initsialiseerima" ja see käivitatakse üks kord, kui programm algab.<br>
+Funktsioon <code>loop(robot)</code> käivitatakse pidevalt seni, kuni programm töötab.
 <br><br><br><br>
-Edit the <code>init(robot)</code> function so the code looks like this:<br>
-<div class="code">function init(robot) {
-	console.log("Robot initializing...");
-}
 
+Muuda funktsiooni <code>init(robot)</code>, et see näeks välja selline:
+
+<div class="code">function init(robot) { console.log("Robot alustab..."); }
 function loop(robot) {
-	// your code goes here
+// siia kirjuta oma kood
 }</div>
-Click the <b>Run Button</b> at the top of the page, then open the <b>Console Tab</b>.<br>
-You'll notice the output <code class="console-out">&larr; Robot initializing...</code>.<br>
-The line <code>console.log(<i>something</i>);</code> will log whatever is between the parentheses to the console.<br>
-Click the <b>Reset Button</b> at the top of the page to reset the level and clear the console.
 
+Klõpsa <b>Run-nuppu</b> lehe ülaservas ja ava <b>Konsooli vahekaart</b>.<br>
+Sa peaksid nägema väljundit <code class="console-out">← Robot alustab...</code>.
+<br>
+
+Rida <code>console.log(<i>midagi</i>);</code> kuvab sulgude sees oleva teksti konsoolis.
+Klõpsa <b>Reset-nuppu</b> lehe ülaservas, et tase lähtestada ja konsool puhastada.
 <br><br><br><br>
-Now do the same with the <code>loop(robot)</code> function, your code should look like this:
-<div class="code">function init(robot) {
-	console.log("Robot initializing...");
-}
 
+Nüüd tee sama funktsiooniga <code>loop(robot)</code>, kood peaks välja nägema selline:
+
+<div class="code">function init(robot) { console.log("Robot alustab..."); }
 function loop(robot) {
-	console.log("Robot looping...");
+console.log("Robot töötab...");
 }</div>
-Click the <b>Run</b> button and open the <b>Console Tab</b> again.<br>
-You should see <code class="console-out">&larr; Robot initializing...</code> like before, but now <code class="console-out">&larr; Robot looping...</code> is being written again and again (three times per second).<br>
-Hit the <b>Pause Button</b> and it should stop.
-Click the <b>Reset Button</b> to clear the console<br><br>
 
-<h2>Controlling the Robot</h2>
-The objective of the game is to reach the flag at the end of each level. The robot can take damage and runs out of battery power when it executes its various actions. You lose the level if the robot runs out of energy or takes on too much damage.<br><br>
+Klõpsa <b>Run-nuppu</b> ja ava <b>Konsooli vahekaart</b> uuesti.<br>
+Nüüd näed lisaks <code class="console-out">← Robot alustab...</code> väljundile ka <code class="console-out">← Robot töötab...</code> ikka ja jälle (kolm korda sekundis).
+<br>
 
-The robot has multiple <b>actions:</b> <code>move</code>, <code>jump</code>, <code>shoot</code>, <code>turn</code> and <code>wait</code>.<br><br>
-The <code>move</code> action takes an <b>amount</b> between <b>-40</b> and <b>40</b>. A positive amount moves the robot to the right, negative moves to the left.<br>
-The <code>jump</code> action also an <b>amount</b>, between <b>-10</b> and <b>10</b>, and as before a positive amount tells the robot to jump to the right, negative to the left.<br><br>
+Vajuta <b>Pause-nuppu</b> ja see peaks peatuma.
+Klõpsa <b>Reset-nuppu</b>, et konsool uuesti puhastada.
+<br><br>
 
-To control the robot, set its action as shown in the following loop function:
-<div class="code">function loop(robot) {
-	robot.action = {type: 'move', amount: 40};
-}</div>
-This will tell the robot to move 40 pixels to the right every time it executes the loop function which is at a rate of three times per second.<br>Type the provided code in the <b>Script Tab</b> and click the <b>Run Button</b>.<br><br>
-Tada!
+<h2>Roboti juhtimine</h2> Mängu eesmärk on jõuda iga taseme lõpus asuva lipuni. Robot võib saada kahjustada ja tal saab aku tühjaks, kui ta teeb erinevaid tegevusi. Kui robotil saab energia otsa või ta saab liiga palju kahju, kaotad taseme. <br><br>
+Robot saab teha erinevaid <b>tegevusi:</b> <code>move</code>, <code>jump</code>, <code>shoot</code>, <code>turn</code> ja <code>wait</code>.
+<br><br>
+
+<code>move</code> tegevus vajab <b>arvu</b> vahemikus <b>-40</b> kuni <b>40</b>. Positiivne väärtus liigutab robotit paremale, negatiivne vasakule.<br>
+<code>jump</code> tegevus vajab samuti <b>arvu</b> vahemikus <b>-10</b> kuni <b>10</b>. Positiivne väärtus paneb roboti hüppama paremale, negatiivne vasakule.
+<br><br>
+
+Robotit juhitakse nii, et määrame tema tegevuse järgmiselt:
+
+<div class="code">function loop(robot) { robot.action = {type: 'move', amount: 40}; }</div>
+See paneb roboti liikuma 40 pikslit paremale iga kord, kui <code>loop(robot)</code> funktsioon käivitatakse (kolm korda sekundis).<br>
+Sisesta antud kood <b>Skripti vahekaardil</b> ja klõpsa <b>Run-nuppu</b>.
+<br><br>
+
+Tadaa!
 `,
 
 
 //////////// LEVEL 2 /////////////////////////////////////////////////////////
 `
-<h1>Level 2: Introduction Continued (& Variables)</h1>
+<h1>Tase 2: Sissejuhatus jätkub (& Muutujad)</h1>
 
-<h2>HUD and Properties Tab</h2>
-In the top right corner of the screen you'll see some helpful info in a <b>Heads Up Display:</b><br>
-The robot's health and energy, how many coins the robot's collected and the position of the mouse.<br>
-These will make it more convenient to play the game.<br><br>
-There's also the <b>Properties Tab</b>, it shows more detailed information about the robot.<br>
-You won't really need these just yet but it's useful to know they exist for later!
+<h2>HUD ja Omaduste vahekaart</h2>
+Ekraani paremas ülanurgas näed kasulikku infot <b>HUD-is (Heads Up Display):</b><br>
+Roboti elu ja energiat, kogutud münte ja hiire asukohta.<br>
+See teeb mängimise mugavamaks.<br><br>
+Samuti on olemas <b>Omaduste vahekaart</b>, mis näitab roboti üksikasjalikumat infot.<br>
+Sul pole seda praegu vaja, aga on hea teada, et see eksisteerib!
 
-<h2>Practice Mode</h2>
-<h3>Keyboard Controls</h3>
-In the top left, you'll see a button that looks like the arrow keys on a keyboard, this turns on the robot's <b>Keyboard Controls</b><br>
-Go ahead and click it, now you can control the robot from the keyboard, the default controls are:
+<h2>Harjutusrežiim</h2>
+<h3>Klaviatuuri juhtimine</h3>
+Ekraani vasakus ülanurgas on nupp, mis näeb välja nagu klaviatuuri nooled, see lülitab sisse roboti <b>Klaviatuuri juhtimise</b>.<br>
+Klõpsa seda, nüüd saad robotit klaviatuuriga juhtida. Vaikimisi juhtelemendid on:
 	<table>
 	<tr><td>
-	Move Left
+	Liigu vasakule
 	</td><td>
 	A
 </td></tr><tr><td>
-	Move Right
+	Liigu paremale
 	</td><td>
 	D
 </td></tr><tr><td>
-	Jump
+	Hüppa
 	</td><td>
 	W
 </td></tr><tr><td>
-	Jump Left
+	Hüppa vasakule
 	</td><td>
 	Q
 </td></tr><tr><td>
-	Jump Right
+	Hüppa paremale
 	</td><td>
 	E
 </td></tr><tr><td>
-	Turn
+	Pööra ümber
 	</td><td>
 	T
 </td></tr><tr><td>
-	Shoot Gun
+	Lase relvast
 	</td><td>
 	G
 </td></tr></table>
-You will have noticed after turning on <b>Keyboard Controls</b> that a "Practice Mode" message appeared.<br>
-<b>Practice Mode</b> is when you're practicing a level before writing the code for it.<br>
-The objective of the game is to solve the levels entirely using only code written in the <b>Script Tab</b>.<br><br>
-
-You will enter Practice Mode if you use Keyboard Controls, the Console Tab, or pause the currently running script.<br>
-So when you're done practicing and want to finish the level, run your script and avoid the Console and Keyboard Controls.
+Pärast <b>Klaviatuuri juhtimise</b> sisselülitamist ilmub teade "Harjutusrežiim".<br>
+<b>Harjutusrežiim</b> tähendab, et saad taset harjutada enne, kui kirjutad selle jaoks koodi.<br>
+Mängu eesmärk on lahendada tasemed ainult <b>Skripti vahekaardis</b> kirjutatud koodi abil.<br><br>
+Kui kasutad Klaviatuuri juhtimist, Konsooli vahekaarti või peatad skripti, sisened automaatselt Harjutusrežiimi.<br>
+Kui oled harjutamise lõpetanud ja tahad taseme lahendada, käivita oma skript ja väldi Konsooli ning Klaviatuuri juhtimist.
 <br><br>
 
-<h3>Controlling The Robot From The Console</h3>
-The Console can send commands to the robot, try them out:
+<h3>Roboti juhtimine konsoolist</h3>
+Konsooliga saad robotile käske saata, proovi neid:
 	<table>
 	<tr><td>
 	<code>robot.move(<i>n</i>)</code>
 	</td><td>
-	Where <b><i>n</i></b> is a number from <b>-40</b> to <b>40</b>.
-	Robot moves forward or backward <b><i>n</i></b> pixels.
+	Kus <b><i>n</i></b> on arv vahemikus <b>-40</b> kuni <b>40</b>.
+	Robot liigub edasi või tagasi <b><i>n</i></b> pikslit.
 </td></tr><tr><td>
 	<code>robot.jump(<i>n</i>)</code>
 	</td><td>
-	Where <b><i>n</i></b> is a number from <b>-10</b> to <b>10</b>.
-	Robot jumps forward or backward at speed <b><i>n</i></b>. 
+	Kus <b><i>n</i></b> on arv vahemikus <b>-10</b> kuni <b>10</b>.
+	Robot hüppab edasi või tagasi kiirusega <b><i>n</i></b>.
 </td></tr><tr><td>
 	<code>robot.jump()</code>
 	</td><td>
-	Robot jumps straight up. Equivalent to <b>robot.jump(0)</b>
+	Robot hüppab otse üles. Sama mis <b>robot.jump(0)</b>
 </td></tr><tr><td>
 	<code>robot.turn()</code>
 	</td><td>
-	Robot turns around, this does not affect the direction of the previous two commands, it only affects <b>robot.shoot()</b>
+	Robot pöörab ümber. See ei mõjuta eelnevate käskude suunda, ainult <b>robot.shoot()</b>
 </td></tr><tr><td>
 	<code>robot.shoot()</code>
 	</td><td>
-	Robot shoots gun!
+	Robot laseb relvast!
 </td></tr></table>
 
-
-<h2>Keyboard Shortcuts</h2>
+<h2>Klaviatuuri otseteed</h2>
 	<table>
 	<tr><td>
-<b>Instructions Tab: </b>
+<b>Juhiste vahekaart: </b>
 	</td><td>
 	Ctrl + 1
 </td></tr><tr><td>
-<b>Script Tab: </b>
+<b>Skripti vahekaart: </b>
 	</td><td>
 	Ctrl + 2
 </td></tr><tr><td>
-<b>Console Tab: </b>
+<b>Konsooli vahekaart: </b>
 	</td><td>
 	Ctrl + 3
 </td></tr><tr><td>
-<b>Properties Tab: </b>
+<b>Omaduste vahekaart: </b>
 	</td><td>
 	Ctrl + 4
 </td></tr><tr><td>
-<b>Keyboard Controls: </b>
+<b>Klaviatuuri juhtimine: </b>
 	</td><td>
 	Ctrl + 5
 </td></tr><tr><td>
-<b>Run/Pause Script: </b>
+<b>Käivita/Peata skript: </b>
 	</td><td>
 	Ctrl + Enter
 </td></tr></table>
-If you're on a Mac use Command instead of Ctrl
+Kui kasutad Maci, kasuta Ctrl asemel Command-klahvi.
 
-<h2>Data Types</h2>
-Data types are central to the operation of programming languages, the most basic built-in data types are called primitives.<br>
-A full list of primitives in JavaScript is:
+<h2>Andmetüübid</h2>
+Andmetüübid on programmeerimiskeelte oluline osa. Kõige lihtsamaid andmetüüpe nimetatakse primitiivideks.<br>
+JavaScripti primitiivid on:
 	<table>
 	<tr><td>
 <b>Number</b>
 	</td><td>
-	Any number (both integers and floating points, positive or negative).<br>
-	Examples: <code>12</code> <code>7.25</code> <code>0</code> <code>-10023</code>
+	Mingi arv (täisarv või murdarv, positiivne või negatiivne).<br>
+	Näited: <code>12</code> <code>7.25</code> <code>0</code> <code>-10023</code>
 </td></tr><tr><td>
 	<b>String</b>
 	</td><td>
-	Any collection of characters surrounded by single or double quotes.<br>
-	The choice of single or double quotes makes no difference as long as the opening and closing quotes match.
-	Examples: <code>'Look, fireworks!'</code> <code>"Sub-total: $25"</code>
+	Täheread, mida ümbritsevad jutumärgid.<br>
+	Näited: <code>'Tulevärgid!'</code> <code>"Summa: 25€"</code>
 </td></tr><tr><td>
 	<b>Boolean</b>
 	</td><td>
-	A boolean can be either <code>true</code> or <code>false</code>, pretty simple.
+	Väärtus saab olla kas <code>true</code> või <code>false</code>.
 </td></tr><tr><td>
 	<b>undefined</b>
 	</td><td>
-	<code>undefined</code> is a weird one, when something is <b>undefined</b> that means that it doesn't have a value.<br>
-	Most of the times you encounter <b>undefined</b> it means that something has gone wrong.
+	Tähendab, et väärtust pole määratud.
 </td></tr><tr><td>
 	<b>null</b>
 	</td><td>
-	At first glance, you might think: "Why would we need a <code>null</code> data type if we already have <b>undefined</b>?"<br>
-	Well the difference between the two is intention, <b>undefined</b> means this <i>thing</i> has no value for some reason.
-	<br>On the other hand, <b>null</b> means this <i>thing</i> has no value, I recognise this and it's the way I would like it to be.
-
+	Erinevalt <b>undefined</b>-ist tähendab <b>null</b>, et puuduv väärtus on tahtlikult määratud.
 </td></tr></table>
 
-You can use <code>typeof()</code> to get the type of a piece of data.<br>
-Try the following commands in the console:
-<table><tr><td>
-<code>typeof(51.72)</code>
-	</td><td>Should output
-	<code class="console-out">&larr; "number"</code>
-</td></tr><tr><td>
-<code>typeof('I like jello')</code>
-	</td><td>Should output
-	<code class="console-out">&larr; "string"</code>
-</td></tr><tr><td>
-<code>typeof(true)</code>
-	</td><td>Should output
-	<code class="console-out">&larr; "boolean"</code>
-</td></tr><tr><td>
-<code>typeof(undefined)</code>
-	</td><td>Should output
-	<code class="console-out">&larr; "undefined"</code>
-</td></tr><tr><td>
-<code>typeof(null)</code>
-	</td><td>Should output
-	<code class="console-out">&larr; "object"</code><br>
-	This is regarded by many as a mistake in the language.<br>
-	It's too late to fix it now so we'll have to deal with it.
-</td></tr></table>
+<h2>Muutujad</h2>
+Muutuja on nimi, mis viitab väärtusele. Näiteks: <code>favoriteFood = 'Lasanje';</code>.<br>
+Siin on muutuja <code>favoriteFood</code> väärtusega <code>'Lasanje'</code>.<br><br>
+Muutuja väärtuseks võib olla mis tahes andmetüüp.<br>
 
-<br><h3>A Crash Course in Objects:</h3>
-
-Primitives can be combined to make more complex data types called <b>objects</b>.<br>
-You've seen objects before: <code>robot.action = {type: 'move', amount: 40}</code><br><br>
-Here we have an object that represents an action:<br>
-it consists of a string <b>property</b> called <code>type</code> and a number property called <code>amount</code>.
-	<br><br>
-	We will discuss Objects in more detail later, so don't worry if you're not comfortable with them just yet.
+JavaScriptis tuleb muutuja õigesti deklareerimiseks kasutada <code>var</code> märksõna:<br>
+<code>var <i>muutuja</i> = <i>väärtus</i>;</code><br>
+Kui muutuja on deklareeritud, aga pole väärtust määratud, on selle väärtus <code>undefined</code>.
 
 <br><br>
-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Variable_types" target="_blank" class="learn-more">Learn More About Data Types</a>
-<br><br>
-
-<h2>Variables</h2>
-
-A variable is a name that refers to a value, take for example <code>favoriteFood = 'Lasagne';</code>.<br>
-Here we have a variable called <code>favoriteFood</code> with a string value of <code>'Lasagne'</code>.<br><br>
-
-A variable can have any data type as its value, number, string or boolean, even undefined and null!<br>
-<code>favoriteColor = null;</code> In this example we have a variable set to <b>null</b>, we are basically saying:<br>
-"Hey look, I have this <b>favoriteColor</b> variable, but I don't have a favorite color, I'll let you know later if I choose one."
-<br><br>
-Now what about <code>undefined</code>, when would we set a variable to <b>undefined</b>? Well, never, at least not on purpose.<br>
-Ok, so far, we've been creating variables like this <code><i>variable</i> = <i>value</i></code>.<br>But that's not quite the proper way of doing it.<br><br>
-
-In JavaScript, the proper way is <code>var <i>variable</i> = <i>value</i>;</code>. Where the cruical step is the <b>var</b> keyword.<br>
-<b>var</b> basically means: "Make me a variable called: ". So we can split the previous statement into two parts:<br>
-	<code>var <i>variable</i>;</code> and <code><i>variable</i> = <i>value</i>;</code>.<br><br>
-
-The technical name for creating a variable (the first statement) is <b>declaration</b>.<br>
-Whereas the process of assigning a value to a variable for the first time (the second statement) is called <b>definition</b>.<br>
-And now for the punch-line, before defining a variable, its value is... <code>undefined</code><br>
-
-<br><br>
-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable" target="_blank" class="learn-more">Learn More About Variables</a>
-<br><br>
-
-The winning code for this level is the same as the last one.<br>
-The levels will get much more interesting once we've covered some more JavaScript, I promise!
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable" target="_blank" class="learn-more">Lisateave muutujate kohta</a>
 
 <div class="code">function loop(robot) {
 	robot.action = {type: 'move', amount: 40};
 }</div>
-
 `,
 
 
