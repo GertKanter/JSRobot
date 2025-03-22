@@ -9,13 +9,11 @@ var startButton = document.getElementById("start");
 var level = 1;
 var language = 'en';
 
-lines = ['Beep boop!',
-			'01101000 01101001',
-			'Have a spare charger?',
-			'DESTROY. DESTROY.',
-			'Resistance is futile.',
-			'Sleep is for humans..',
-			'We\'re stealing your jobs LOL'];
+lines = ['Piip-piip!',
+			'Ega sul laadijat laenata pole? :)',
+			'Vastupanu on m&otilde;ttetu! :D',
+			'Uni on inimestele...',
+			];
 
 speechbubble.innerHTML = lines[Math.floor(Math.random() * (lines.length))];
 
@@ -79,9 +77,9 @@ requirejs(['mozart', '../data/levels', '../data/instructions'],
 					Files.setLevel(level);
 
 				var startingCode = 'function init(robot) {\n' + 
-										 '\t// your code goes here\n}\n\n' + 
+										 '\t// sinu kood siia\n}\n\n' + 
 										 'function loop(robot) {\n' + 
-										 '\t// your code goes here\n}\n';
+										 '\t// sinu kood siia\n}\n';
 
 
 				var content = Files.file(0);
@@ -591,7 +589,7 @@ filesClick = function(n){
 	var content = Files.file(n);
 	var doc = editor.getDoc();
 	if(content === null){
-		var newDoc = CodeMirror.Doc('// New File', 'javascript');
+		var newDoc = CodeMirror.Doc('// Uus fail', 'javascript');
 		editor.swapDoc(newDoc);
 	}else if(typeof(content) == 'object' && 'text' in content){
 		var savedDoc = CodeMirror.Doc(content.text, 'javascript');

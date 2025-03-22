@@ -19,7 +19,7 @@ Robotil on veel omadusi, proovi ka neid:
 <code>robot.info().y</code> <code>robot.info().health</code> <code>robot.info().energy</code> <code>robot.info().width</code>
 <br><br>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console" target="_blank" class="learn-more">Loe rohkem konsooli kohta</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console" target="_blank" class="learn-more">Loe rohkem konsooli kohta (inglise keeles)</a>
 <br><br>
 
 <h2>Skripti vahekaart</h2> Nüüd oskame suhelda konsooliga. Proovime panna roboti konsooliga rääkima. <br>
