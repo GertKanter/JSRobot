@@ -5,7 +5,27 @@ define(['mozart'], function (mozart) {
 
 //////////// LEVEL 1 /////////////////////////////////////////////////////////
 `
-<h1>Tase 1: Sissejuhatus</h1> Piip-piip! JavaScript on väga populaarne veebis kasutatav skriptimiskeel. Peaaegu iga veebileht (ja loomulikult ka see!) kasutab JavaScripti, et dünaamiliselt sisu kuvada sinu brauseris. <br><br> <h2>Konsooli vahekaart</h2> Enne kui hakkame koodi kirjutama, alustame põhitõdedest: konsooli kasutamisest. Konsool on tööriist, mida arendajad kasutavad, et testida, kas programm töötab õigesti. Seda kasutatakse programmi väljundi logimiseks ja sellega suhtlemiseks. <br><br>
+<h1>Programmeerimisharjutus</h1>
+
+K&auml;esolevat harjutust võib teha nii "oma peaga" kui proovida tehisaru (AI) abi kasutada.<br><br>
+
+Tehisaru kasutamisel tuleks anda sellele sisendiks allpool kirjas olevat infot. Kõike infot ei ole tehisarul vaja, et osata abi pakkuda. See ongi &uuml;ks õpiväljund tehisaru rakendamise puhul: millist infot tuleb tehisarule anda, et ta oskaks p&auml;riselt aidata?<br /><br />
+
+Tehisaru võib kasutada näiteks sellistel lehtedel:<br /><br />
+<a href="https://chatgpt.com" target="_blank" class="learn-more">ChatGPT</a><br />
+<a href="https://claude.ai" target="_blank" class="learn-more">Claude</a><br />
+<a href="https://gemini.google.com" target="_blank" class="learn-more">Google Gemini</a><br />
+
+<br />
+Tehisaru korral püüa sellega dialoogi pidada, andes talle teada, mis juhtus näiteks, "proovisin sinu antud koodi, aga robot ei hakanud üldse liikuma. Kas ja millist lisainfot sul vaja oleks?" jne.
+
+<br /><br />
+
+<hr>
+
+<h1>Tase 1: Sissejuhatus</h1> Piip-piip! JavaScript on väga populaarne veebis kasutatav skriptimiskeel. Peaaegu iga veebileht (ja loomulikult ka see!) kasutab JavaScripti, et dünaamiliselt sisu kuvada sinu brauseris. <br><br>
+
+<h2>Konsooli vahekaart</h2> Enne kui hakkame koodi kirjutama, alustame põhitõdedest: konsooli kasutamisest. Konsool on tööriist, mida arendajad kasutavad, et testida, kas programm töötab õigesti. Seda kasutatakse programmi väljundi logimiseks ja sellega suhtlemiseks. <br><br>
 <b>Konsooli vahekaardil</b> kirjuta tekstiväljale <code>5 + 8</code>, vajuta Enter ja vaata, mis juhtub.<br>
 
 Esimene rida (<code>→ 5 + 8</code>) on sinu sisend,
@@ -45,12 +65,12 @@ function loop(robot) {
 // siia kirjuta oma kood
 }</div>
 
-Klõpsa <b>Run-nuppu</b> lehe ülaservas ja ava <b>Konsooli vahekaart</b>.<br>
+Klõpsa <b>K&auml;ivita-nuppu</b> lehe ülaservas ja ava <b>Konsooli vahekaart</b>.<br>
 Sa peaksid nägema väljundit <code class="console-out">← Robot alustab...</code>.
 <br>
 
 Rida <code>console.log(<i>midagi</i>);</code> kuvab sulgude sees oleva teksti konsoolis.
-Klõpsa <b>Reset-nuppu</b> lehe ülaservas, et tase lähtestada ja konsool puhastada.
+Klõpsa <b>Restart-nuppu</b> lehe ülaservas, et tase lähtestada ja konsool puhastada.
 <br><br><br><br>
 
 Nüüd tee sama funktsiooniga <code>loop(robot)</code>, kood peaks välja nägema selline:
@@ -60,12 +80,12 @@ function loop(robot) {
 console.log("Robot töötab...");
 }</div>
 
-Klõpsa <b>Run-nuppu</b> ja ava <b>Konsooli vahekaart</b> uuesti.<br>
+Klõpsa <b>R&auml;ivita-nuppu</b> ja ava <b>Konsooli vahekaart</b> uuesti.<br>
 Nüüd näed lisaks <code class="console-out">← Robot alustab...</code> väljundile ka <code class="console-out">← Robot töötab...</code> ikka ja jälle (kolm korda sekundis).
 <br>
 
 Vajuta <b>Pause-nuppu</b> ja see peaks peatuma.
-Klõpsa <b>Reset-nuppu</b>, et konsool uuesti puhastada.
+Klõpsa <b>Restart-nuppu</b>, et konsool uuesti puhastada.
 <br><br>
 
 <h2>Roboti juhtimine</h2> Mängu eesmärk on jõuda iga taseme lõpus asuva lipuni. Robot võib saada kahjustada ja tal saab aku tühjaks, kui ta teeb erinevaid tegevusi. Kui robotil saab energia otsa või ta saab liiga palju kahju, kaotad taseme. <br><br>
@@ -80,7 +100,7 @@ Robotit juhitakse nii, et määrame tema tegevuse järgmiselt:
 
 <div class="code">function loop(robot) { robot.action = {type: 'move', amount: 40}; }</div>
 See paneb roboti liikuma 40 pikslit paremale iga kord, kui <code>loop(robot)</code> funktsioon käivitatakse (kolm korda sekundis).<br>
-Sisesta antud kood <b>Skripti vahekaardil</b> ja klõpsa <b>Run-nuppu</b>.
+Sisesta antud kood <b>Skripti vahekaardil</b> ja klõpsa <b>K&auml;ivita-nuppu</b>.
 <br><br>
 
 Tadaa!
@@ -208,7 +228,7 @@ JavaScripti primitiivid on:
 	<b>String</b>
 	</td><td>
 	Täheread, mida ümbritsevad jutumärgid.<br>
-	Näited: <code>'Tulevärgid!'</code> <code>"Summa: 25€"</code>
+	Näited: <code>'Ilutulestik!'</code> <code>"Summa: 25€"</code>
 </td></tr><tr><td>
 	<b>Boolean</b>
 	</td><td>
@@ -233,7 +253,7 @@ JavaScriptis tuleb muutuja õigesti deklareerimiseks kasutada <code>var</code> m
 Kui muutuja on deklareeritud, aga pole väärtust määratud, on selle väärtus <code>undefined</code>.
 
 <br><br>
-<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable" target="_blank" class="learn-more">Lisateave muutujate kohta</a>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable" target="_blank" class="learn-more">Lisateave muutujate kohta (inglise keeles)</a>
 
 <div class="code">function loop(robot) {
 	robot.action = {type: 'move', amount: 40};
@@ -244,382 +264,373 @@ Kui muutuja on deklareeritud, aga pole väärtust määratud, on selle väärtus
 
 //////////// LEVEL 3 /////////////////////////////////////////////////////////
 `
-<h1>Level 3: Math and Control Flow</h1>
+<h1>Tase 3: Matemaatika ja juhtimisvoog</h1>
 
-<h2>Math</h2>
-<h3>Arithmetic Operators</h3>
-JavaScript supports the basic arithmetic operations: <code>+  -  *  /  %  **</code>.<br>
-Addition, subtraction, multiplication, division, modulo (remainder after division), and exponential.<br><br>
+<h2>Matemaatika</h2>
+<h3>Arvutamisoperaatorid</h3>
+JavaScript toetab põhialuseid arvutuste teostamiseks: <code>+  -  *  /  %  **</code>.<br>
+Liitmine, lahutamine, korrutamine, jagamine, moodul (jääk pärast jagamist) ja eksponentsiaalne tõstmine.<br><br>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank" class="learn-more">Learn More About Arithmetic Operators</a>
-<br><br>	
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank" class="learn-more">Loe rohkem arvutamisoperaatoritest</a>
+<br><br>
 
-<h3>Assignment Operators</h3>
-As it turns out, in programming the following operations are exceedingly popular: <code>i = i + 1;</code>, <code>m = m / 2;</code>.<br>
-So a shorthand notation was developed, the previous two expressions can be rewritten as: <code>i += 1;</code> and <code>m /= 2;</code><br>
-The two operations <code>i += 1;</code> and <code>i -= 1;</code> are probably the most often used in programming, so they were shortened even further to <code>i++;</code> and <code>i--;</code><br><br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" target="_blank" class="learn-more">Learn More About Assignment Operators</a>
-<br><br>	
+<h3>Andmete määramise operaatorid</h3>
+Programmeerimises on väga populaarsed järgmised toimingud: <code>i = i + 1;</code>, <code>m = m / 2;</code>.<br>
+Seetõttu arendati välja lühem tähistus, need kaks väljendit saab ümber kirjutada järgmiselt: <code>i += 1;</code> ja <code>m /= 2;</code><br>
+Need kaks toimingut <code>i += 1;</code> ja <code>i -= 1;</code> on programmeerimises tõenäoliselt kõige sagedamini kasutatavad, seetõttu lühendati neid veelgi <code>i++;</code> ja <code>i--;</code><br><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" target="_blank" class="learn-more">Loe rohkem andmete määramise operaatoritest</a>
+<br><br>
 
-<h3>String Concatenation</h3>
-Adding strings isn't quite math, but it's very useful. You can add multiple strings together with the <code>+</code> operator:<br>
-<code>"Robots " + "are " + "cool" + '!'</code> and this gives the string <code>"Robots are cool!"</code><br><br>
-Numbers can be added to strings, the explicit way to do this is using the <b>String()</b> constructor.<br>
-<code>String(47)</code> turns the number 47 into the string "47". And then we can perform string concatenation with the result.<br>
-<code>"There are " + String(47) + " jellybeans in this packet."</code><br><br>
-But very often it's quite obvious what we're trying to do, so the following works just as well in JavaScript:<br>
-<code>"There are " + 47 + " jellybeans in this packet."</code> The rule is: adding a number and a string together first converts the number to a string.<br><br>
-So this makes sense, but in some cases it's not as helpful as we'd like. Take for example <code>"7" + 3</code> this gives the string <code>"73"</code> which might not be what you expected so take care.
+<h3>Stringide ühendamine</h3>
+Stringide lisamine ei ole päris matemaatika, kuid see on väga kasulik. Sa saad liita mitu stringi koos <code>+</code> operaatoriga:<br>
+<code>"Robotid " + "on " + "lahedad" + '!'</code> ja see annab stringi <code>"Robotid on lahedad!"</code><br><br>
+Numbrid saavad olla seotud stringidega, selge viis seda teha on kasutada <b>String()</b> konstruktorit.<br>
+<code>String(47)</code> muudab numbri 47 stringiks "47". Ja siis saame teha stringide ühendamise tulemusega.<br>
+<code>"Pakendis on " + String(47) + " kommipalle."</code><br><br>
+Aga väga tihti on täiesti selge, mida me püüame teha, nii et järgnev töötab JavaScriptis sama hästi:<br>
+<code>"Pakendis on " + 47 + " kommipalle."</code> Reegel on: numbri ja stringi liitmine muudab numbri esmalt stringiks.<br><br>
+See teeb mõistlikuks, aga mõningatel juhtudel ei pruugi see olla nii kasulik kui tahaksime. Näiteks <code>"7" + 3</code> annab stringi <code>"73"</code>, mis ei pruugi olla see, mida ootasite, seega olge ettevaatlik.
 
-	<br><br>
-<h3>Parsing Strings to Numbers</h3>
-Hmmmm, what happens if instead of adding we tried to subtract, so say <code>"7" - 3</code>. Try it, you should get <code>4</code>.<br>
-Well, this is interesting, JavaScript knew that the string "7" was actually a number in disguise.<br>
-Now although this is a useful answer, and JavaScript is a very smart cookie, we want to avoid using number and strings together like this.<br>
-If you know that you have a string that contains a number, convert it to number data type using one of the following functions:<br>
+<br><br>
+<h3>Stringide teisendamine numbriteks</h3>
+Hmmmm, mis juhtub, kui proovime lisamise asemel lahutada, näiteks <code>"7" - 3</code>. Proovige, peaksite saama <code>4</code>.<br>
+See on huvitav, JavaScript teadis, et string "7" on tegelikult number peidetud kujul.<br>
+Kuigi see on kasulik vastus ja JavaScript on väga nutikas, tahame vältida numbri ja stringi koos kasutamist sellisel viisil.<br>
+Kui tead, et sul on string, mis sisaldab numbrit, teisenda see numbriks järgmiste funktsioonidega:<br>
 <table>
 <tr><td>
-	<code>Number.parseInt()</code>
+        <code>Number.parseInt()</code>
 </td><td>
-	Converts a string representing an integer to a number, ignores any extra characters.<br>
-	Calling <code>Number.parseInt()</code> on <code>"23"</code> <code>"7.25 litres"</code> <code>"1.995"</code> and <code>"3 apples."</code>
-	<br>Gives <code class="console-out">&larr; 23</code>
-	<code class="console-out">&larr; 7</code>
-	<code class="console-out">&larr; 1</code>
-	<code class="console-out">&larr; 3</code>
+        Muudab täisarvu esindava stringi numbriks, ignoreerides kõik täiendavad märgid.<br>
+        Kui kutsuda <code>Number.parseInt()</code> stringidel <code>"23"</code> <code>"7.25 liitrit"</code> <code>"1.995"</code> ja <code>"3 õuna."</code>
+        <br>Annab <code class="console-out">&larr; 23</code>
+        <code class="console-out">&larr; 7</code>
+        <code class="console-out">&larr; 1</code>
+        <code class="console-out">&larr; 3</code>
 
 </td></tr><tr><td>
-	<code>Number.parseInt()</code>
+        <code>Number.parseFloat()</code>
 </td><td>
-	Converts a string representing a floating point number to a number, ignores any extra characters.<br>
-	Calling <code>Number.parseFloat()</code> on <code>"23"</code> <code>"7.25 litres"</code> <code>"1.995"</code> <code>"3 apples."</code><br>
-	Gives <code class="console-out">&larr; 23</code>
-	<code class="console-out">&larr; 7.25</code>
-	<code class="console-out">&larr; 1.995</code>
-	<code class="console-out">&larr; 3</code>
+        Muudab komakoha numbri esindava stringi numbriks, ignoreerides kõik täiendavad märgid.<br>
+        Kui kutsuda <code>Number.parseFloat()</code> stringidel <code>"23"</code> <code>"7.25 liitrit"</code> <code>"1.995"</code> <code>"3 õuna."</code><br>
+        Annab <code class="console-out">&larr; 23</code>
+        <code class="console-out">&larr; 7.25</code>
+        <code class="console-out">&larr; 1.995</code>
+        <code class="console-out">&larr; 3</code>
 </td></tr></table>
 
 <br><br>
 <h3>NaN</h3>
-So what happens when we try and do something silly with our numbers?<br>
-For example <code>'orange' - 4</code> <code>Number.parseInt('football');</code> <code>0 / 0</code> <code> (-1) ** 0.5</code><br>
-Well, we get a <code class="console-out">&larr; NaN</code>, which stands for <b>Not a Number</b>. <br><br>
-<b>NaN</b> is interesting, <code>typeof(NaN);</code> gives us <code class="console-out">&larr; "number"</code>... So Not a Number is in fact a number.<br>
-There's a built-in function for testing for NaN values, <code>Number.isNaN()</code>.<br>
+Mis juhtub, kui proovime teha midagi tobedat oma numbritega?<br>
+Näiteks <code>'apelsin' - 4</code> <code>Number.parseInt('jalgpall');</code> <code>0 / 0</code> <code> (-1) ** 0.5</code><br>
+Noh, me saame <code class="console-out">&larr; NaN</code>, mis tähistab <b>Ei ole arv</b>. <br><br>
+<b>NaN</b> on huvitav, <code>typeof(NaN);</code> annab meile <code class="console-out">&larr; "number"</code>... Nii et Ei ole arv on tegelikult number.<br>
+Eksisteerib sisseehitatud funktsioon NaN väärtuste testimiseks, <code>Number.isNaN()</code>.<br>
 
-<h3>Infinity</h3>
-Some properties of <code>Infinity</code>:
-	<table><tr><td>
-<code>1 / 0</code> 
-	</td><td>
-	<code class="console-out">&larr; Infinity</code>
-	</td></tr><tr><td>
-<code>1 / Infinity</code> 
-	</td><td>
-	<code class="console-out">&larr; 0</code>
-	</td></tr><tr><td>
-<code>Infinity + 1</code> 
-	</td><td>
-	<code class="console-out">&larr; Infinity</code>
-	</td></tr><tr><td>
-<code>10 ** 1000</code> 
-	</td><td>
-	<code class="console-out">&larr; Infinity</code>
-	</td></tr></table>
+<h3>Lõpmatus</h3>
+Mõned omadused <code>Lõpmatus</code> kohta:
+        <table><tr><td>
+<code>1 / 0</code>
+        </td><td>
+        <code class="console-out">&larr; Infinity</code>
+        </td></tr><tr><td>
+<code>1 / Infinity</code>
+        </td><td>
+        <code class="console-out">&larr; 0</code>
+        </td></tr><tr><td>
+<code>Infinity + 1</code>
+        </td><td>
+        <code class="console-out">&larr; Infinity</code>
+        </td></tr><tr><td>
+<code>10 ** 1000</code>
+        </td><td>
+        <code class="console-out">&larr; Infinity</code>
+        </td></tr></table>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" class="learn-more">Learn More About the Number Object</a><br><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" class="learn-more">Loe rohkem Number objektist</a><br><br>
 
-<h3>Advanced Math Functions</h3>
-	<table><tr><td>
-<code>Math.round(<i>number</i>)</code> 
-	</td><td>
-	Returns <i>number</i> rounded to the nearest integer.
-	</td></tr><tr><td>
-<code>Math.abs(<i>number</i>)</code> 
-	</td><td>
-	Returns the absolute value of <i>number</i>.
-	</td></tr><tr><td>
-<code>Math.sin(<i>number</i>)</code> 
-	</td><td>
-	Returns the sine of <i>number</i>.
-	</td></tr><tr><td>
-<code>Math.cos(<i>number</i>)</code> 
-	</td><td>
-	Returns the cosine of <i>number</i>.
-	</td></tr><tr><td>
-<code>Math.sqrt(<i>number</i>)</code> 
-	</td><td>
-	Returns the square root of <i>number</i>.
-	</td></tr><tr><td>
-<code>Math.pow(<i>base</i>, <i>exponent</i>)</code> 
-	</td><td>
-	Returns <i>base</i> to the <i>exponent</i> power.
-	</td></tr><tr><td>
-<code>Math.log(<i>number</i>)</code> 
-	</td><td>
-	Returns the natural logarithm ln() of <i>number</i>.
-	</td></tr><tr><td>
-<code>Math.max(<i>x</i>, <i>y</i>, ...)</code> 
-	</td><td>
-	Returns the largest of the numbers passed in.<br><code>Math.min(<i>x</i>, <i>y</i>, ...)</code> returns the smallest.
-	</td></tr></table>
+<h3>Täiendavad matemaatikafunktsioonid</h3>
+        <table><tr><td>
+<code>Math.round(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i>, ümardatuna lähimale täisarvule.
+        </td></tr><tr><td>
+<code>Math.abs(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i> absoluutväärtuse.
+        </td></tr><tr><td>
+<code>Math.sin(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i> siini väärtuse.
+        </td></tr><tr><td>
+<code>Math.cos(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i> koosiini väärtuse.
+        </td></tr><tr><td>
+<code>Math.sqrt(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i> ruutjuure.
+        </td></tr><tr><td>
+<code>Math.pow(<i>base</i>, <i>exponent</i>)</code>
+        </td><td>
+        Tagastab <i>base</i> astendatud <i>exponent</i>-i astmeni.
+        </td></tr><tr><td>
+<code>Math.log(<i>number</i>)</code>
+        </td><td>
+        Tagastab <i>number</i> loogaritmi (natural log) väärtuse.
+        </td></tr><tr><td>
+<code>Math.min(<i>num1</i>, <i>num2</i>, ...)</code>
+        </td><td>
+        Tagastab väikseima numbri antud argumentide hulgast.
+        </td></tr><tr><td>
+<code>Math.max(<i>num1</i>, <i>num2</i>, ...)</code>
+        </td><td>
+        Tagastab suurima numbri antud argumentide hulgast.
+        </td></tr><tr><td>
+<code>Math.random()</code>
+        </td><td>
+        Tagastab juhusliku arvu vahemikus 0 kuni 1.
+        </td></tr></table>
+        
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" class="learn-more">Loe rohkem Math objekti kohta (inglise keeles)</a>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" class="learn-more">Learn More About Math Functions</a><br><br>
-
-<h2>Booleans</h2>
-The following operators return <code>true</code> or <code>false</code>, these will be essential to make use of Control Flow which is the main concept of this level.
+<h2>Boolean’id</h2>
+Järgmised operaatorid tagastavad <code>true</code> või <code>false</code>, need on olulised juhtimisvoo (Control Flow) kasutamiseks, mis on selle taseme peamine mõiste.
 <br><br>
 
-	<h3>Equality Operators</h3>
+<h3>Võrdlusoperaatorid</h3>
 <table><tr><td>
-	<code><i>a</i> == <i>b</i></code>
+<code><i>a</i> == <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> and <i>b</i> are equal in value, false otherwise.<br>
-	Note that <i>a</i> and <i>b</i> can have different types and still be equal.<br>
-	Examples:
-	<code>3.25 == 3.25</code> <code class="console-out">&larr; true</code> , 
-	<code>3 == "3"</code> <code class="console-out">&larr; true</code> , 
-	<code>12 == 0.2</code> <code class="console-out">&larr; false</code>
+Tagastab true, kui <i>a</i> ja <i>b</i> on väärtuselt võrdsed, vastasel juhul false.<br>
+Pange tähele, et <i>a</i> ja <i>b</i> võivad olla erineva tüübiga, kuid ikkagi võrdsed.<br>
+Näited:
+<code>3.25 == 3.25</code> <code class="console-out">&larr; true</code> ,
+<code>3 == "3"</code> <code class="console-out">&larr; true</code> ,
+<code>12 == 0.2</code> <code class="console-out">&larr; false</code>
 </td></tr><tr><td>
-	<code><i>a</i> === <i>b</i></code>
+<code><i>a</i> === <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> and <i>b</i> are equal in value <b>and have the same type</b>, false otherwise.<br>
-	Examples:
-	<code>3.25 === 3.25</code> <code class="console-out">&larr; true</code> , 
-	<code>3 === "3"</code> <code class="console-out">&larr; false</code> , 
-	<code>12 === 0.2</code> <code class="console-out">&larr; false</code>
+Tagastab true, kui <i>a</i> ja <i>b</i> on väärtuselt ja tüübilt võrdsed, vastasel juhul false.<br>
+Näited:
+<code>3.25 === 3.25</code> <code class="console-out">&larr; true</code> ,
+<code>3 === "3"</code> <code class="console-out">&larr; false</code> ,
+<code>12 === 0.2</code> <code class="console-out">&larr; false</code>
 </td></tr><tr><td>
-	<code><i>a</i> != <i>b</i></code>
+<code><i>a</i> != <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> and <i>b</i> are not equal in value, regardless of type, false otherwise.<br>
-	Examples:
-	<code>3.25 != 3.25</code> <code class="console-out">&larr; false</code> , 
-	<code>3 != "3"</code> <code class="console-out">&larr; false</code> , 
-	<code>12 != 0.2</code> <code class="console-out">&larr; true</code>
+Tagastab true, kui <i>a</i> ja <i>b</i> ei ole väärtuselt võrdsed, sõltumata tüübist, vastasel juhul false.<br>
+Näited:
+<code>3.25 != 3.25</code> <code class="console-out">&larr; false</code> ,
+<code>3 != "3"</code> <code class="console-out">&larr; false</code> ,
+<code>12 != 0.2</code> <code class="console-out">&larr; true</code>
 </td></tr><tr><td>
-	<code><i>a</i> !== <i>b</i></code>
+<code><i>a</i> !== <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> and <i>b</i> are either not equal in value or type, false otherwise.<br>
-	Examples:
-	<code>3.25 !== 3.25</code> <code class="console-out">&larr; false</code> , 
-	<code>3 !== "3"</code> <code class="console-out">&larr; true</code> , 
-	<code>12 !== 0.2</code> <code class="console-out">&larr; true</code>
+Tagastab true, kui <i>a</i> ja <i>b</i> ei ole väärtuselt ega tüübilt võrdsed, vastasel juhul false.<br>
+Näited:
+<code>3.25 !== 3.25</code> <code class="console-out">&larr; false</code> ,
+<code>3 !== "3"</code> <code class="console-out">&larr; true</code> ,
+<code>12 !== 0.2</code> <code class="console-out">&larr; true</code>
 </td></tr></table>
 
-<h3>Comparison Operators</h3>
-	
+<h3>Võrdlusoperaatorid</h3>
+
 <table><tr><td>
-	<code><i>a</i> < <i>b</i></code>
+<code><i>a</i> < <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> is less than <i>b</i>, false otherwise.<br>
-	Examples: 
-	<code>1 < 2</code> <code class="console-out">&larr; true</code> , 
-	<code>2 < 2</code> <code class="console-out">&larr; false</code> , 
-	<code>3 < 2</code> <code class="console-out">&larr; false</code>
+Tagastab true, kui <i>a</i> on väiksem kui <i>b</i>, vastasel juhul false.<br>
+Näited:
+<code>1 < 2</code> <code class="console-out">&larr; true</code> ,
+<code>2 < 2</code> <code class="console-out">&larr; false</code> ,
+<code>3 < 2</code> <code class="console-out">&larr; false</code>
 </td></tr><tr><td>
-	<code><i>a</i> <= <i>b</i></code>
+<code><i>a</i> <= <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> is less than or equal to <i>b</i>, false otherwise.<br>
-	Examples: 
-	<code>1 <= 2</code> <code class="console-out">&larr; true</code> , 
-	<code>2 <= 2</code> <code class="console-out">&larr; true</code> , 
-	<code>3 <= 2</code> <code class="console-out">&larr; false</code>
+Tagastab true, kui <i>a</i> on väiksem või võrdne <i>b</i>-ga, vastasel juhul false.<br>
+Näited:
+<code>1 <= 2</code> <code class="console-out">&larr; true</code> ,
+<code>2 <= 2</code> <code class="console-out">&larr; true</code> ,
+<code>3 <= 2</code> <code class="console-out">&larr; false</code>
 </td></tr><tr><td>
-	<code><i>a</i> > <i>b</i></code>
+<code><i>a</i> > <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> is greater than <i>b</i>, false otherwise.<br>
-	Examples: 
-	<code>1 > 2</code> <code class="console-out">&larr; false</code> , 
-	<code>2 > 2</code> <code class="console-out">&larr; false</code> , 
-	<code>3 > 2</code> <code class="console-out">&larr; true</code>
+Tagastab true, kui <i>a</i> on suurem kui <i>b</i>, vastasel juhul false.<br>
+Näited:
+<code>1 > 2</code> <code class="console-out">&larr; false</code> ,
+<code>2 > 2</code> <code class="console-out">&larr; false</code> ,
+<code>3 > 2</code> <code class="console-out">&larr; true</code>
 </td></tr><tr><td>
-	<code><i>a</i> >= <i>b</i></code>
+<code><i>a</i> >= <i>b</i></code>
 </td><td>
-	Returns true if <i>a</i> is greater than or equal to <i>b</i>, false otherwise.<br>
-	Examples: 
-	<code>1 >= 2</code> <code class="console-out">&larr; false</code> , 
-	<code>2 >= 2</code> <code class="console-out">&larr; true</code> , 
-	<code>3 >= 2</code> <code class="console-out">&larr; true</code>
+Tagastab true, kui <i>a</i> on suurem või võrdne <i>b</i>-ga, vastasel juhul false.<br>
+Näited:
+<code>1 >= 2</code> <code class="console-out">&larr; false</code> ,
+<code>2 >= 2</code> <code class="console-out">&larr; true</code> ,
+<code>3 >= 2</code> <code class="console-out">&larr; true</code>
 </td></tr></table>
 
-<h3>Logical Operators</h3>
-	
+<h3>Loogikaoperaatorid</h3>
+
 <table><tr><td>
-	<code>!<i>a</i></code>
+<code>!<i>a</i></code>
 </td><td>
-	The <b>NOT</b> operator, flips true to false and vice versa.<br>
-	Examples: 
-	<code>!true</code> <code class="console-out">&larr; false</code> , 
-	<code>!false</code> <code class="console-out">&larr; true</code>
+<b>MITTE</b> operaator, muudab true väärtuse false’ks ja vastupidi.<br>
+Näited:
+<code>!true</code> <code class="console-out">&larr; false</code> ,
+<code>!false</code> <code class="console-out">&larr; true</code>
 
 </td></tr><tr><td>
-	<code><i>a</i> && <i>b</i></code>
+<code><i>a</i> && <i>b</i></code>
 </td><td>
-	The <b>AND</b> operator, returns true if both <i>a</i> and <i>b</i> are true, and false if either of them is false.<br>
-	Examples: 
-	<code>true && true</code> <code class="console-out">&larr; true</code> , 
-	<code>true && false</code> <code class="console-out">&larr; false</code> , 
-	<code>true && true</code> <code class="console-out">&larr; false</code>
+<b>JA</b> operaator, tagastab true, kui nii <i>a</i> kui <i>b</i> on true, vastasel juhul false.<br>
+Näited:
+<code>true && true</code> <code class="console-out">&larr; true</code> ,
+<code>true && false</code> <code class="console-out">&larr; false</code> ,
+<code>true && true</code> <code class="console-out">&larr; false</code>
 
 </td></tr><tr><td>
-	<code><i>a</i> || <i>b</i></code>
+<code><i>a</i> || <i>b</i></code>
 </td><td>
-	The <b>OR</b> operator, returns true if both <i>a</i> and <i>b</i> are true, and false if either of them is false.<br>
-	Examples: 
-	<code>true || true</code> <code class="console-out">&larr; true</code> , 
-	<code>true || false</code> <code class="console-out">&larr; true</code> , 
-	<code>true || true</code> <code class="console-out">&larr; false</code>
+<b>VÕI</b> operaator, tagastab true, kui kas <i>a</i> või <i>b</i> on true, vastasel juhul false.<br>
+Näited:
+<code>true || true</code> <code class="console-out">&larr; true</code> ,
+<code>true || false</code> <code class="console-out">&larr; true</code> ,
+<code>true || true</code> <code class="console-out">&larr; false</code>
 
 </td></tr></table>
 
-<h3>Falsy Values</h3>
-A falsy value is one that acts as if it were <code>false</code>.
-In JavaScript there are six "falsy" values:<br>
+<h3>Falsed väärtused</h3>
+False väärtus on väärtus, mis käitub kui <code>false</code>.
+JavaScriptis on kuus "false" väärtust:<br>
 <ol><li>
-<code>false</code> obviously<br>
-	</li><li>
-<code>0</code> and <code>-0</code><br>
-	</li><li>
-<code>""</code> or <code>''</code> the empty string<br>
-	</li><li>
-<code>NaN</code> i.e. Not a Number<br>
-	</li><li>
+<code>false</code> loomulikult<br>
+        </li><li>
+<code>0</code> ja <code>-0</code><br>
+        </li><li>
+<code>""</code> või <code>''</code> tühi string<br>
+        </li><li>
+<code>NaN</code> ehk mitte arv<br>
+        </li><li>
 <code>undefined</code><br>
-	</li><li>
+        </li><li>
 <code>null</code><br>
-	</li></ol>
+        </li></ol>
 
-Try out the following commands with falsy values substituted in to see how they act like false:<br><br>
-	<code>!(<i>value</i>)</code><br>
-	<code><i>value</i> && true</code><br>
-	<code><i>value</i> || false</code><br><br>
-Then try them with regular numbers and strings and see how the behaviour changes.
+Proovi järgmisi käske, asendades falsed väärtused ja vaata, kuidas need käituvad nagu false:<br><br>
+<code>!(<i>value</i>)</code><br>
+<code><i>value</i> && true</code><br>
+<code><i>value</i> || false</code><br><br>
+Proovi neid tavaliste numbrite ja stringidega ja vaata, kuidas käitumine muutub.
 
-<br><br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators" target="_blank" class="learn-more">Learn More About Logical Operators and Falsy Values</a><br><br>
+<br><br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators" target="_blank" class="learn-more">Õpi rohkem loogikaoperaatorite ja falsed väärtuste kohta</a><br><br>
 
 
-<h2>Control Flow</h2>
+<h2>Juhtimisvoog</h2>
 <h3>If-Else</h3>
-Control flow statements allow a program to execute different code based on a condition.<br>
-If a certain condition is true, one piece of code is executed; if it's false another piece of code is executed.<br>
+Juhtimisvoo laused võimaldavad programmil täita erinevat koodi olenevalt tingimusest.<br>
+Kui teatud tingimus on täidetud, täidetakse üks kooditükk; kui see pole täidetud, täidetakse teine kooditükk.<br>
 <br>
-The following code is an example of an <b>if-else</b> statement:
+Järgmine kood on <b>if-else</b> lause näide:
 <div class="code">var rollsOfToiletPaper = 5;
 if (rollsOfToiletPaper <= 1) {
-	console.log("I need to buy more toilet paper!");
+        console.log("Mul on vaja rohkem tualettpaberit osta!");
 } else if (rollsOfToiletPaper > 50){
-	console.log("Why did I buy this much toilet paper??");
+        console.log("Miks ma ostsin nii palju tualettpaberit??");
 } else {
-	console.log("All good.");
+        console.log("Kõik on korras.");
 }</div>
-This program should be easy to understand:<br>
-If the value of <code>rollsOfToiletPaper</code> is less than or equal to 1, the code inside the first pair of curly braces is executed.<br> If it's greater than 50, the code between the second pair of curly braces is executed.<br>
-Otherwise the codein the last set of braces is executed.<br><br>
-<b>Note:</b> Code that's written between curly braces is called a <b>block</b> of code.
-<br><br>
+See programm peaks olema lihtne mõista:<br>
+Kui <code>rollsOfToiletPaper</code> väärtus on väiksem või võrdne 1, siis täidetakse esimene plokk.<br>
+Kui see on suurem kui 50, siis täidetakse teine plokk.<br>
+Muidu täidetakse viimane plokk.<br><br>
+<b>Märkus:</b> Kood, mis on kirjutatud krüpteeritud kaaridesse, nimetatakse <b>plokiks</b>.<br><br>
 
-To give a more formal definition, the <code>if</code> keyword is always followed by condition inside a pair of parentheses <code>(<i>condition</i>)</code>, after the condition we place a block of code <code>{ <i>do something here</i> }</code>.<br>
-Optionally, afterwards we can place an <code>else if</code> which behaves the same as an <code>if</code> or just an <code>else</code> which doesn't take a condition, just a block.
+Et anda täpsem määratlus, siis <code>if</code> võtmesõna järel on alati tingimus, mis on paigutatud sulgudesse <code>(<i>condition</i>)</code>, pärast tingimust tuleb koodiplokk <code>{ <i>do something here</i> }</code>.<br>
+Võimalusel saab paigutada <code>else if</code>, mis käitub samamoodi nagu <code>if</code>, või lihtsalt <code>else</code>, mis ei vaja tingimust, vaid ainult ploki.
 <br>
-Once the first condition is met the block following it is executed, the blocks for all the other <code>else</code> statements are ignored.
+Kui esimene tingimus on täidetud, siis täidetakse sellele järgnevad plokid, kuid kõiki muid <code>else</code> plokke ignoreeritakse.
 
-	<br><br>
+<br><br>
 <h3>Switch</h3>
-Sometimes we have to write programs like this:
+Mõnikord peame kirjutama selliseid programme nagu see:
 <div class="code">var letter = 'C';
 if (letter === 'A') {
-	console.log('A for Aligator');
+        console.log('A nagu Aligator');
 } else if (letter === 'B') {
-	console.log('B for Beaver');
+        console.log('B nagu Beaver');
 } else if (letter === 'C') {
-	console.log('C for Chameleon');
+        console.log('C nagu Kameleon');
 } else if (letter === 'D') {
-	console.log('D for Dishwasher');
+        console.log('D nagu Nõudepesumasin');
 } else if (letter === 'E') {
-	console.log('E for Elephant');
+        console.log('E nagu Elevant');
 } else {
-	console.log('Unsupported letter, please try again');
+        console.log('Toetamata täht, proovi uuesti');
 }</div>
 
-It gets tedious and difficult to read, a much more convenient and appealing way of writing the same program is with a <code>switch</code> statement:
+Seda on tülikas ja raske lugeda, palju mugavam ja atraktiivsem viis sama programmi kirjutamiseks on <code>switch</code> lause:
 <div class="code">var letter = 'C';
 switch (letter) {
-	case 'A':
-		console.log('A for Aligator');
-		break;
-	case 'B':
-		console.log('B for Beaver');
-		break
-	case 'C':
-		console.log('C for Chameleon');
-		break;
-	case 'D':
-		console.log('D for Dishwasher');
-		break;
-	case 'E':
-		console.log('E for Elephant');
-		break;
-	default:
-		console.log('Unsupported letter, please try again');
+        case 'A':
+                console.log('A nagu Aligator');
+                break;
+        case 'B':
+                console.log('B nagu Beaver');
+                break
+        case 'C':
+                console.log('C nagu Kameleon');
+                break;
+        case 'D':
+                console.log('D nagu Nõudepesumasin');
+                break;
+        case 'E':
+                console.log('E nagu Elevant');
+                break;
+        default:
+                console.log('Toetamata täht, proovi uuesti');
 }</div>
 
-<h3>Conditional Operator (or the Ternary Operator)</h3>
-<code><i>condition</i> ? <i>statement1</i> : <i>statement2</i>;</code><br><br>
-If <i>condition</i> evaluates to true then <i>statement1</i> is executed, otherwise <i>statement2</i> is executed.<br>
-Consider the following code:
+<h3>Tingimusoperaator (või ternary operaator)</h3>
+<code><i>tingimus</i> ? <i>lausung1</i> : <i>lausung2</i>;</code><br><br>
+Kui <i>tingimus</i> on true, täidetakse <i>lausung1</i>, vastasel juhul <i>lausung2</i>.<br>
+Arvesta järgmise koodiga:
 <div class="code">var milkExpired = false;
 if (milkExpired) {
-	console.log("I'm not having breakfast today :(");
+    console.log("Piim on hapuks läinud!");
 } else {
-	console.log("Cereal time!");
+    console.log("Piim on värske!");
 }</div>
 
-Using the conditional operator, it can be shortened to:
+Me võime teha sama koodiga <b>tingimusoperaatorit</b>:
 <div class="code">var milkExpired = false;
-milkExpired ? console.log("I'm not having breakfast today.") : console.log("Cereal time!");
-</div>
-Actually it can be shortened even further:
-<div class="code">var milkExpired = false;
-console.log( milkExpired ? "I'm not having breakfast today." : "Cereal time!");
-</div>
+milkExpired ? console.log("Piim on hapuks läinud!") : console.log("Piim on värske!");</div>
 
-<h2>Time to Play The Level</h2>
-It's pretty obvious the robot will have to jump, try it out, go to the <b>Console Tab</b> and type in:<br>
-<code>robot.jump(10);</code> That's the furthest forward the robot can jump.
+<h2>Aeg mängu taset mängida</h2>
+On üsna selge, et robot peab hüppama, proovi seda välja, mine <b>Konsooli vahekaardile</b> ja kirjuta sisse:<br>
+<code>robot.jump(10);</code> See on kaugus, mille robot suudab hüpata.
 <br><br>
-Try to alternate between jumping and moving forward? <code>robot.move(40);</code>
+Proovi vaheldumisi hüpata ja edasi liikuda: <code>robot.move(40);</code>
 <br>
-By the way, when the text input is selected in the console, use the up and down keys to go back and forth in your executed commands history.
+Muide, kui tekstisisend on konsoolis valitud, kasuta üles- ja allanooleklahve, et liikuda oma täidetud käskude ajaloos edasi ja tagasi.
 <br><br>
-If you can, try to write your solution in the <b>Script Tab</b>.<br><br>
+Kui saad, proovi oma lahendust kirjutada <b>Script vahekaardile</b>.<br><br>
 
-One thing to keep in mind, if you declare a variable inside <code>function init()</code>,
-it will not be available in <code>function loop()</code>, the explanation behind this will come in later levels.<br>
-For now, if you want to create a variable and access it later, create a property on the <b>robot</b> object like this:<br>
-	<code>robot.myNewProperty = "some value";</code>
-	
-	Good luck!<br><br>
-If you've been trying for a while and just can't work it out then:<br>
+Üks asi, mida meeles pidada: kui deklareerid muutuja <code>function init()</code> sees, siis see ei ole saadaval <code>function loop()</code> sees. Selle selgitus tuleb hilisemates tasemetes.<br>
+Praegu, kui tahad luua muutuja ja sellele hiljem ligi pääseda, loo omadus <b>robot</b> objektil nagu see:<br>
+        <code>robot.myNewProperty = "mõni väärtus";</code>
 
-	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
-	<br><br>
+        Palju õnne!<br><br>
+Kui oled juba mõnda aega proovinud ja ei saa ikka hakkama, siis:<br>
 
-	<div id="solution">
+        <br><br>
+        <a id="showSolution" class="show-solution">Kuva lahendus</a>
+        <br><br>
+
+        <div id="solution">
 <div class="code">function init(robot) {
-	robot.jumpNext = true;
+        robot.jumpNext = true;
 }
-
-function loop(robot) {
-	if (robot.jumpNext) {
-		robot.action = {type: 'jump', amount: 10};
-		robot.jumpNext = false;
-	} else {
-		robot.action = {type: 'move', amount: 40};
-		robot.jumpNext = true;
-	}
-}</div>
-</div>
 `,
 
 
@@ -628,25 +639,19 @@ function loop(robot) {
 
 //////////// LEVEL 4 /////////////////////////////////////////////////////////
 `
-<h1>Level 4</h1>
+<h1>Tase 4</h1>
 
-<h3>I haven't written the instructions for this level yet :(</h3>
-<h3>If you would like to help out tweet me <a href="https://twitter.com/reaalkhalil/">@reaalkhalil</a></h3>
+N&uuml;&uuml;d võiks kasutada tehisaru abi (nt <a href="https://chatgpt.com/" target="_blank" class="learn-more">ChatGPT</a>), et &uuml;lesannet lahendada:<br /><br />
 
-<!--
-	keyboard control
-	function name(){}
-	var name = function(){}
-	parameters
-	return
-	declaration vs expression
-	arrow
-	built-in functions: String, Number, Math, [links to Mozilla]
--->
+Tehisarule oleks vaja selgitada, et roboti asukoht tasemel on k&auml;ttesaadav info.<br /><br />
+
+Roboti asukoha kohta saab k&uuml;sida informatsiooni nii: <code>robot.info().x</code>
 
 
+
+Kui tehisaru kuidagi hakkama ei saa, siis v&otilde;id allolevat nuppu vajutada, et lahendust n&auml;ha.
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <div class="code">function loop(robot) {
@@ -667,7 +672,7 @@ function loop(robot) {
 <h1>Level 5</h1>
 
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <div class="code">function loop(robot) {
@@ -690,8 +695,10 @@ function loop(robot) {
 `
 <h1>Level 6</h1>
 
+Vihje: roboti m&uuml;ntide arvu saab teada nii: <code>robot.info().coins</code>
+
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <div class="code">function loop(robot) {
@@ -711,8 +718,10 @@ function loop(robot) {
 `
 <h1>Level 7</h1>
 
+Vihje: kollased seinad viivad j&auml;rgmisele tasemele!
+
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <div class="code">function init(robot) {
@@ -739,8 +748,10 @@ function loop(robot) {
 `
 <h1>Level 8</h1>
 
+Kas tehisaru suudab seda lahendada? Kuidas seda arusaadavalt sellele &uuml;ldse kirjeldada?
+
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <div class="code">function init(robot) {
@@ -766,7 +777,7 @@ function loop(robot) {
 <h1>Level 9</h1>
 
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <code>action-queue:</code>
@@ -831,7 +842,7 @@ function loop(robot) {
 <h1>Level 10</h1>
 
 	<br><br>
-	<a id="showSolution" class="show-solution">Show Solution</a>
+	<a id="showSolution" class="show-solution">N&auml;ita lahendust</a>
 	<br><br>
 	<div id="solution">
 <code>find:</code>
